@@ -314,3 +314,41 @@ h1 {
 .option .sterne svg { width: 14px; height: 14px; }
 
 nav > .rechtliches { margin-top: 18px; }
+
+/* ---------- Kopf V6 ---------- */
+.kopf h1 { letter-spacing: 0.14em; margin-bottom: 4px; }
+.by { font-family: var(--serif); font-style: italic; font-size: 19px; color: var(--anthrazit); margin: 0 0 10px; }
+.kopf .zusatz { text-transform: none; letter-spacing: 0.18em; font-size: 13px; }
+
+/* ---------- Wortmarke wie im Logo (V7) ---------- */
+@font-face {
+  font-family: "Cinzel";
+  src: url("cinzel.woff2") format("woff2");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+.kopf .wortmarke {
+  position: relative;
+  display: inline-block;
+  font-family: "Cinzel", var(--serif);
+  font-weight: 400;
+  font-size: 34px;
+  letter-spacing: 0.03em;
+  line-height: 1;
+  margin: 4px 0 66px;
+  color: var(--anthrazit);
+}
+.wortmarke .sig {
+  position: absolute;
+  width: 108px;
+  height: auto;
+  left: 65%;
+  top: 48%;
+  pointer-events: none;
+}
+.kopf .zusatz { margin-top: 0; }
+@media (max-width: 360px) {
+  .kopf .wortmarke { font-size: 29px; }
+  .wortmarke .sig { width: 94px; }
+}
