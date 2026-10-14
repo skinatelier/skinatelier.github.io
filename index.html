@@ -9,18 +9,10 @@
   <link rel="icon" href="favicon.ico" sizes="any">
   <link rel="icon" type="image/png" sizes="192x192" href="icon-192.png">
   <link rel="apple-touch-icon" href="apple-touch-icon.png">
-  <link rel="stylesheet" href="style.css?v=17">
-  <script>
-    document.documentElement.classList.add('js');
-    try {
-      if (!sessionStorage.getItem('intro') && !matchMedia('(prefers-reduced-motion: reduce)').matches) {
-        document.documentElement.classList.add('splash');
-      }
-    } catch (e) {}
-  </script>
+  <link rel="stylesheet" href="style.css?v=15">
+  <script>document.documentElement.classList.add('js');</script>
 </head>
 <body>
-  <div class="intro-splash" aria-hidden="true"><img src="logo.jpg" alt=""></div>
   <main class="wrap">
 
     <header class="kopf ein">
@@ -68,31 +60,6 @@
 
   </main>
   <script>
-    (function () {
-      var h = document.documentElement;
-      if (!h.classList.contains('splash')) return;
-      try { sessionStorage.setItem('intro', '1'); } catch (e) {}
-      var sp = document.querySelector('.intro-splash');
-      var si = sp.querySelector('img');
-      var lg = document.querySelector('.kopf .logo');
-      var fertig = false;
-      function ende() {
-        if (fertig) return; fertig = true;
-        h.classList.remove('splash', 'splash-run');
-        if (sp.parentNode) sp.parentNode.removeChild(sp);
-      }
-      function start() {
-        setTimeout(function () {
-          var a = si.getBoundingClientRect(), b = lg.getBoundingClientRect();
-          si.style.transform = 'translate(' + (b.left - a.left) + 'px,' + (b.top - a.top) + 'px) scale(' + (b.width / a.width) + ')';
-          h.classList.add('splash-run');
-          setTimeout(ende, 2300);
-        }, 2500);
-      }
-      if (si.complete) start(); else { si.onload = start; si.onerror = ende; }
-      setTimeout(ende, 8000);
-      sp.addEventListener('click', ende);
-    })();
     if (/iPad|iPhone|iPod|Macintosh/.test(navigator.userAgent) && 'ontouchend' in document) {
       document.getElementById('route').href = 'https://maps.apple.com/?daddr=Breite+Str.+23,+13187+Berlin';
     }
