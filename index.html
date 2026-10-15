@@ -9,10 +9,18 @@
   <link rel="icon" href="favicon.ico" sizes="any">
   <link rel="icon" type="image/png" sizes="192x192" href="icon-192.png">
   <link rel="apple-touch-icon" href="apple-touch-icon.png">
-  <link rel="stylesheet" href="style.css?v=15">
-  <script>document.documentElement.classList.add('js');</script>
+  <link rel="stylesheet" href="style.css?v=18">
+  <script>
+    document.documentElement.classList.add('js');
+    try {
+      if (!sessionStorage.getItem('intro') && !matchMedia('(prefers-reduced-motion: reduce)').matches) {
+        document.documentElement.classList.add('splash');
+      }
+    } catch (e) {}
+  </script>
 </head>
 <body>
+  <div class="intro-splash" aria-hidden="true"><img src="logo.jpg" alt=""></div>
   <main class="wrap">
 
     <header class="kopf ein">
@@ -49,7 +57,8 @@
 
       <div class="panel" id="p-bewertung">
         <p class="hinweis">Du warst bei mir? Über deine Bewertung freue ich mich sehr.</p>
-          <a class="option" href="https://g.page/r/Cb8iwYjjQEqQECE/review" target="_blank" rel="noopener"><span class="sterne" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="m12 2.8 2.8 5.7 6.3.9-4.6 4.4 1.1 6.2L12 17l-5.6 3 1.1-6.2-4.6-4.4 6.3-.9Z"/></svg><svg viewBox="0 0 24 24"><path d="m12 2.8 2.8 5.7 6.3.9-4.6 4.4 1.1 6.2L12 17l-5.6 3 1.1-6.2-4.6-4.4 6.3-.9Z"/></svg><svg viewBox="0 0 24 24"><path d="m12 2.8 2.8 5.7 6.3.9-4.6 4.4 1.1 6.2L12 17l-5.6 3 1.1-6.2-4.6-4.4 6.3-.9Z"/></svg><svg viewBox="0 0 24 24"><path d="m12 2.8 2.8 5.7 6.3.9-4.6 4.4 1.1 6.2L12 17l-5.6 3 1.1-6.2-4.6-4.4 6.3-.9Z"/></svg><svg viewBox="0 0 24 24"><path d="m12 2.8 2.8 5.7 6.3.9-4.6 4.4 1.1 6.2L12 17l-5.6 3 1.1-6.2-4.6-4.4 6.3-.9Z"/></svg></span>Auf Google bewerten<svg class="ext" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17 17 7M9 7h8v8"/></svg></a>
+        <a class="option bew" href="https://g.page/r/Cb8iwYjjQEqQECE/review" target="_blank" rel="noopener"><span class="sterne" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="m12 2.8 2.8 5.7 6.3.9-4.6 4.4 1.1 6.2L12 17l-5.6 3 1.1-6.2-4.6-4.4 6.3-.9Z"/></svg><svg viewBox="0 0 24 24"><path d="m12 2.8 2.8 5.7 6.3.9-4.6 4.4 1.1 6.2L12 17l-5.6 3 1.1-6.2-4.6-4.4 6.3-.9Z"/></svg><svg viewBox="0 0 24 24"><path d="m12 2.8 2.8 5.7 6.3.9-4.6 4.4 1.1 6.2L12 17l-5.6 3 1.1-6.2-4.6-4.4 6.3-.9Z"/></svg><svg viewBox="0 0 24 24"><path d="m12 2.8 2.8 5.7 6.3.9-4.6 4.4 1.1 6.2L12 17l-5.6 3 1.1-6.2-4.6-4.4 6.3-.9Z"/></svg><svg viewBox="0 0 24 24"><path d="m12 2.8 2.8 5.7 6.3.9-4.6 4.4 1.1 6.2L12 17l-5.6 3 1.1-6.2-4.6-4.4 6.3-.9Z"/></svg></span><span class="bew-text"><strong>Google</strong><small>Bewertung schreiben</small></span><svg class="ext" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17 17 7M9 7h8v8"/></svg></a>
+        <a class="option bew" href="https://de.trustpilot.com/review/skinatelier.studio" target="_blank" rel="noopener"><span class="sterne" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="m12 2.8 2.8 5.7 6.3.9-4.6 4.4 1.1 6.2L12 17l-5.6 3 1.1-6.2-4.6-4.4 6.3-.9Z"/></svg><svg viewBox="0 0 24 24"><path d="m12 2.8 2.8 5.7 6.3.9-4.6 4.4 1.1 6.2L12 17l-5.6 3 1.1-6.2-4.6-4.4 6.3-.9Z"/></svg><svg viewBox="0 0 24 24"><path d="m12 2.8 2.8 5.7 6.3.9-4.6 4.4 1.1 6.2L12 17l-5.6 3 1.1-6.2-4.6-4.4 6.3-.9Z"/></svg><svg viewBox="0 0 24 24"><path d="m12 2.8 2.8 5.7 6.3.9-4.6 4.4 1.1 6.2L12 17l-5.6 3 1.1-6.2-4.6-4.4 6.3-.9Z"/></svg><svg viewBox="0 0 24 24"><path d="m12 2.8 2.8 5.7 6.3.9-4.6 4.4 1.1 6.2L12 17l-5.6 3 1.1-6.2-4.6-4.4 6.3-.9Z"/></svg></span><span class="bew-text"><strong>Trustpilot</strong><small>Lesen &amp; bewerten</small></span><svg class="ext" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17 17 7M9 7h8v8"/></svg></a>
       </div>
     </nav>
 
@@ -60,6 +69,31 @@
 
   </main>
   <script>
+    (function () {
+      var h = document.documentElement;
+      if (!h.classList.contains('splash')) return;
+      try { sessionStorage.setItem('intro', '1'); } catch (e) {}
+      var sp = document.querySelector('.intro-splash');
+      var si = sp.querySelector('img');
+      var lg = document.querySelector('.kopf .logo');
+      var fertig = false;
+      function ende() {
+        if (fertig) return; fertig = true;
+        h.classList.remove('splash', 'splash-run');
+        if (sp.parentNode) sp.parentNode.removeChild(sp);
+      }
+      function start() {
+        setTimeout(function () {
+          var a = si.getBoundingClientRect(), b = lg.getBoundingClientRect();
+          si.style.transform = 'translate(' + (b.left - a.left) + 'px,' + (b.top - a.top) + 'px) scale(' + (b.width / a.width) + ')';
+          h.classList.add('splash-run');
+          setTimeout(ende, 2300);
+        }, 2500);
+      }
+      if (si.complete) start(); else { si.onload = start; si.onerror = ende; }
+      setTimeout(ende, 8000);
+      sp.addEventListener('click', ende);
+    })();
     if (/iPad|iPhone|iPod|Macintosh/.test(navigator.userAgent) && 'ontouchend' in document) {
       document.getElementById('route').href = 'https://maps.apple.com/?daddr=Breite+Str.+23,+13187+Berlin';
     }
