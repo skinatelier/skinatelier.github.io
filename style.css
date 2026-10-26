@@ -476,3 +476,10 @@ nav > .rechtliches { margin-top: 18px; }
   color: var(--gold);
 }
 .v-icon svg { width: 19px; height: 19px; }
+
+/* ---------- V26: Quelle Dermalogica-Angaben ---------- */
+.partner-quelle { font-size: 10.5px; color: var(--grau); opacity: .8; margin: 10px 0 0; letter-spacing: .02em; }
+
+/* ---------- V27: Vorteile ohne Icons ---------- */
+.vorteile { gap: 12px 10px; margin-top: 14px; }
+.vorteile li { padding: 10px 6px; border-top: 1px solid var(--linie); justify-content: center; }
