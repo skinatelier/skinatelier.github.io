@@ -375,3 +375,104 @@ nav > .rechtliches { margin-top: 18px; }
 .bew-text { display: flex; flex-direction: column; line-height: 1.25; }
 .bew-text strong { font-weight: 600; font-size: 15px; }
 .bew-text small { font-size: 12.5px; color: var(--grau); font-weight: 400; }
+
+/* ---------- V21: Sprachwahl & Sprachhinweis ---------- */
+.wrap { position: relative; }
+.sprachwahl {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 6px;
+  margin: -24px 0 8px;
+  font-size: 12.5px;
+  letter-spacing: 0.12em;
+  color: var(--linie);
+}
+.sprachwahl a {
+  color: var(--grau);
+  text-decoration: none;
+  padding: 6px 4px;
+  border-bottom: 1px solid transparent;
+}
+.sprachwahl a:hover { color: var(--anthrazit); }
+.sprachwahl a[aria-current] { color: var(--gold); border-bottom-color: var(--gold); font-weight: 600; }
+.sprachen {
+  margin: -12px auto 26px;
+  font-size: 12px;
+  line-height: 1.5;
+  letter-spacing: 0.04em;
+  color: var(--grau);
+  text-align: center;
+}
+.sprachen strong {
+  display: block;
+  font-weight: 500;
+  font-size: 13px;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--gold);
+}
+
+/* ---------- V23: Dermalogica-Partnerschaft ---------- */
+.partner {
+  margin: 4px auto 30px;
+  padding: 18px 20px 16px;
+  max-width: 340px;
+  text-align: center;
+  border-top: 1px solid var(--linie);
+  border-bottom: 1px solid var(--linie);
+}
+.partner-label {
+  display: block;
+  font-size: 11px;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: var(--grau);
+  margin-bottom: 6px;
+}
+.partner-marke {
+  display: block;
+  font-size: 19px;
+  font-weight: 600;
+  letter-spacing: 0.28em;
+  color: var(--anthrazit);
+  margin-bottom: 10px;
+}
+.partner-logo { display: block; height: 20px; width: auto; max-width: 70%; margin: 4px auto 12px; }
+.partner-text {
+  font-size: 13.5px;
+  line-height: 1.6;
+  color: var(--grau);
+  margin: 0;
+}
+.partner + .sprachen { margin-top: 0; }
+
+/* ---------- V25: Dermalogica-Vorteile ---------- */
+.vorteile {
+  list-style: none;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 10px;
+  padding: 0;
+  margin: 16px 0 2px;
+}
+.vorteile li {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 7px;
+  font-size: 11.5px;
+  line-height: 1.35;
+  color: var(--grau);
+  text-align: center;
+}
+.v-icon {
+  display: grid;
+  place-items: center;
+  width: 38px;
+  height: 38px;
+  border-radius: 50%;
+  border: 1px solid var(--linie);
+  color: var(--gold);
+}
+.v-icon svg { width: 19px; height: 19px; }
