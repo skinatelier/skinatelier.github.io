@@ -483,3 +483,13 @@ nav > .rechtliches { margin-top: 18px; }
 /* ---------- V27: Vorteile ohne Icons ---------- */
 .vorteile { gap: 12px 10px; margin-top: 14px; }
 .vorteile li { padding: 10px 6px; border-top: 1px solid var(--linie); justify-content: center; }
+
+/* ---------- V27: Social Media (Instagram + Facebook) ---------- */
+.panel .gruppe {
+  font-size: 11px;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--gold);
+  margin: 8px 2px 0;
+}
+.panel .hinweis + .gruppe { margin-top: 0; }
