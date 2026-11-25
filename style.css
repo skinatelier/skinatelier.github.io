@@ -493,3 +493,155 @@ nav > .rechtliches { margin-top: 18px; }
   margin: 8px 2px 0;
 }
 .panel .hinweis + .gruppe { margin-top: 0; }
+
+/* ---------- V29: Behandlungen & Preise ---------- */
+.preise { margin-top: 34px; }
+.preise-titel {
+  font-family: "Cinzel", var(--serif);
+  font-weight: 400;
+  font-size: 19px;
+  letter-spacing: 0.08em;
+  text-align: center;
+  margin: 0 0 6px;
+  color: var(--anthrazit);
+}
+.preise-titel::after {
+  content: "";
+  display: block;
+  width: 56px;
+  height: 1px;
+  margin: 12px auto 4px;
+  background: linear-gradient(90deg, transparent, var(--gold), transparent);
+}
+.p-kat { margin-top: 18px; }
+.p-kat h3 {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  font-family: var(--serif);
+  font-weight: 400;
+  font-size: 17px;
+  margin: 0 0 4px;
+  color: var(--anthrazit);
+}
+.p-kat h3::after { content: ""; flex: 1; height: 1px; background: var(--linie); }
+.p-item { border-bottom: 1px solid rgba(184, 145, 63, 0.16); }
+.p-item:last-child { border-bottom: 0; }
+.p-zeile {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  width: 100%;
+  padding: 13px 2px;
+  background: none;
+  border: 0;
+  font: inherit;
+  color: var(--anthrazit);
+  text-align: left;
+  cursor: pointer;
+  -webkit-tap-highlight-color: transparent;
+}
+.p-zeile:focus-visible { outline: 2px solid var(--gold); outline-offset: 2px; border-radius: 8px; }
+.p-name { flex: 1; font-size: 15px; line-height: 1.35; }
+.p-name sup { font-size: 0.65em; color: var(--grau); }
+.p-zeit {
+  display: block;
+  margin-top: 3px;
+  font-size: 11.5px;
+  letter-spacing: 0.02em;
+  color: #b9afa9;
+}
+.p-preis {
+  font-family: var(--serif);
+  font-size: 16.5px;
+  color: var(--anthrazit);
+  white-space: nowrap;
+}
+.p-pfeil {
+  width: 16px;
+  height: 16px;
+  flex: none;
+  color: var(--gold);
+  transition: transform .35s ease;
+}
+.p-item.offen .p-pfeil { transform: rotate(180deg); }
+
+/* Karte, die hinter der Zeile hervorkommt */
+.p-karte { display: grid; grid-template-rows: 1fr; }
+.js .p-karte { grid-template-rows: 0fr; transition: grid-template-rows .45s cubic-bezier(.4, 0, .2, 1); }
+.js .p-item.offen .p-karte { grid-template-rows: 1fr; }
+.p-innen { overflow: hidden; min-height: 0; }
+.p-blatt {
+  margin: 0 6px 14px;
+  padding: 16px 16px 14px;
+  border: 1px solid var(--linie);
+  border-top: 0;
+  border-radius: 0 0 16px 16px;
+  background: linear-gradient(180deg, #f6eee8 0%, #fffdfb 22px);
+  box-shadow: inset 0 10px 12px -10px rgba(120, 90, 60, 0.28), 0 6px 14px rgba(120, 90, 60, 0.06);
+}
+.js .p-blatt { transform: translateY(-14px); opacity: 0; transition: transform .45s cubic-bezier(.4, 0, .2, 1), opacity .3s ease; }
+.js .p-item.offen .p-blatt { transform: none; opacity: 1; }
+.p-text { font-size: 14px; line-height: 1.65; color: #4a4542; margin: 0 0 10px; }
+.p-punkte { margin: 0 0 10px; padding-left: 18px; font-size: 13.5px; line-height: 1.6; color: #4a4542; }
+.p-punkte li::marker { color: var(--gold); }
+.p-label {
+  font-size: 11px;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--gold);
+  margin: 12px 0 6px;
+}
+.p-ablauf {
+  list-style: none;
+  counter-reset: s;
+  margin: 0 0 4px;
+  padding: 0;
+  display: grid;
+  gap: 5px;
+}
+.p-ablauf li {
+  counter-increment: s;
+  display: flex;
+  gap: 10px;
+  align-items: baseline;
+  font-size: 13.5px;
+  color: #4a4542;
+}
+.p-ablauf li::before {
+  content: counter(s);
+  flex: none;
+  width: 18px;
+  font-family: var(--serif);
+  font-size: 12px;
+  color: var(--gold);
+  text-align: right;
+}
+.p-fn { font-size: 12px; color: var(--grau); margin: 8px 0 0; }
+.p-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  margin-top: 14px;
+  min-height: 46px;
+  border-radius: 12px;
+  background: var(--anthrazit);
+  color: #fbf6ef;
+  font-size: 14px;
+  font-weight: 500;
+  text-decoration: none;
+}
+.p-btn svg { width: 18px; height: 18px; color: var(--gold-hell); }
+.p-btn:focus-visible { outline: 2px solid var(--gold); outline-offset: 3px; }
+.p-noten {
+  margin-top: 16px;
+  text-align: center;
+  font-size: 11.5px;
+  line-height: 1.6;
+  color: var(--grau);
+}
+.p-noten p { margin: 0 0 4px; }
+@media (prefers-reduced-motion: reduce) {
+  .js .p-karte, .js .p-blatt, .p-pfeil { transition: none; }
+}
