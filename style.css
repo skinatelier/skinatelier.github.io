@@ -645,3 +645,20 @@ nav > .rechtliches { margin-top: 18px; }
 @media (prefers-reduced-motion: reduce) {
   .js .p-karte, .js .p-blatt, .p-pfeil { transition: none; }
 }
+
+/* ---------- V30: heller Button, Ablauf als Fließtext, Partner unten ---------- */
+.p-btn {
+  background: var(--beige);
+  color: var(--anthrazit);
+  border: 1px solid var(--linie);
+  transition: background-color .2s ease, box-shadow .2s ease;
+}
+.p-btn:hover { background: #efe2d8; box-shadow: 0 4px 12px rgba(120, 90, 60, 0.10); }
+.p-btn svg { color: var(--gold); }
+.p-ablauf { display: block; margin: 0 0 4px; font-size: 13.5px; line-height: 1.7; color: #4a4542; }
+.p-lead { color: var(--anthrazit); font-weight: 500; }
+.partner-unten { margin: 34px auto 0; }
+
+/* ---------- V31: Ablauf zurückhaltender, Label größer ---------- */
+.p-label { font-size: 12.5px; }
+.p-ablauf { font-size: 12.5px; color: #9a908b; }
