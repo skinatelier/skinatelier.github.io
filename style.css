@@ -662,3 +662,14 @@ nav > .rechtliches { margin-top: 18px; }
 /* ---------- V31: Ablauf zurückhaltender, Label größer ---------- */
 .p-label { font-size: 12.5px; }
 .p-ablauf { font-size: 12.5px; color: #9a908b; }
+
+/* ---------- V34: Kategorien dezent hervorgehoben ---------- */
+.p-kat { margin-top: 24px; }
+.p-kat:first-child { margin-top: 14px; }
+.p-kat h3 {
+  font-size: 19.5px;
+  letter-spacing: 0.03em;
+  color: var(--gold);
+  margin: 0 0 6px;
+}
+.p-kat h3::after { background: var(--gold); opacity: .45; }
